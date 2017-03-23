@@ -14,3 +14,7 @@ class Blogpost(models.Model):
     @permalink
     def get_absolute_url(self):
         return ('view_blog_post', None, { 'slug': self.slug })
+
+class Person(models.Model):
+    name = models.CharField(max_length=30)
+    age = models.IntegerField()
